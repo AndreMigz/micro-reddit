@@ -1,0 +1,11 @@
+<%= form_with model: [ @post, @post.comments.build] do |form| %>
+    <section class="add-comment">
+        <p>
+            <%= form.label :body%><br>
+            <%= form.text_area :body, :required => true%>
+        </p>
+        <div class="bottom">
+            <%= form.submit %>
+        </div>
+    </section>
+<% end %>

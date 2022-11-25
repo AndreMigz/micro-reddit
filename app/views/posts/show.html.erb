@@ -1,0 +1,11 @@
+<section class="post-details">
+    Posted by <%= @post.user.username %>
+    <h2><%= @post.title %></h2>
+    <p>
+        <%= @post.body %>
+    </p>
+    <h3>Comments</h2>
+    <%= render @post.comments %>
+    <h3>Add a comment:</h3>
+    <%= render "comments/form" %>
+</section>

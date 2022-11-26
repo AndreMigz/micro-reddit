@@ -1,8 +1,7 @@
 <%= form_with model: [ @post, @post.comments.build] do |form| %>
     <section class="add-comment">
         <p>
-            <%= form.label :body%><br>
-            <%= form.text_area :body, :required => true%>
+            <%= form.text_area :body, :required => true, placeholder: "What are your thoughts?"%>
         </p>
         <div class="bottom">
             <%= form.submit %>

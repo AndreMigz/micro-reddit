@@ -13,3 +13,292 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ *{
+    font-family: 'Poppins', sans-serif;
+ }
+ body {
+   background-color:rgb(244, 242, 242);
+ }
+
+ /* Header */
+ 
+ header {
+    background-color: #237bbe;
+    margin-bottom: 3rem;
+    border-bottom: 0.5px solid gainsboro;
+ }
+ nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    padding-right: 15px;
+ }
+ nav a{
+    color: white;
+    text-decoration: none;
+ }
+ nav a:hover{
+    color: rgb(255, 234, 113);
+ }
+ ul {
+    list-style: none;
+ }
+ .left {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+ }
+.top-menu{
+    margin-left: 15px;
+    margin-top: 3px;
+ }
+
+.right {
+    display: flex;
+    align-items: center;
+ }
+.user-link {
+    margin-right: 10px;
+}
+.button {
+    border: 1px solid white;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+.button:hover{
+    background-color: white;
+    color:#237bbe;
+}
+
+/* Posts */
+.posts {
+    width: 80%;
+    margin: auto;
+}
+.content{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.post .posted_by {
+    font-size: 10px;
+}
+.post-title {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/* Create Post */
+.create-new {
+    width: 80%;
+    height: 380px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 10px;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#post_title{
+    width:100%;
+    padding: 10px;
+    font-size: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#post_body {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 12px;
+    margin: 8px 0;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.create-new input[type = submit]{
+    color: white;
+    padding: 0.7em 1.7em;
+    border-radius: 0.5em;
+    font-size: 12px;
+    background: #237bbe;
+    border: 1px solid #e8e8e8;
+    float: right;
+}
+.create-new input[type=submit]:hover{
+    background: white;
+    color:#237bbe;
+    border: 1px solid #237bbe;
+}
+
+/* View Post */
+.post-details {
+    border: 1px solid #e8e8e8;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.post-details h2 {
+}
+.post-details h3 {
+    margin-top: 30px;
+}
+.post-details .comment-content{
+    border: 1px solid #c7c7c7;
+    padding: 0px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.post-details .commenter {
+    font-size: 10px;
+
+}
+.post-details .body {
+    font-size: 14px;
+}
+
+.add-comment #comment_body {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 12px;
+    margin: 8px 0;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+}
+.add-comment input[type=submit]{
+    color: white;
+    padding: 0.7em 1.7em;
+    border-radius: 0.5em;
+    font-size: 12px;
+    background: #237bbe;
+    border: 1px solid #e8e8e8;
+}
+.add-comment input[type=submit]:hover{
+    background: white;
+    color:#237bbe;
+    border: 1px solid #237bbe;
+}
+
+/* Sign In */
+
+.sign-in {
+    border: 1px solid #e8e8e8;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+}
+.sign-in h1 {
+    text-align: center;
+}
+.sign-in #email {
+    width: 95%;
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom:15px;
+}
+.sign-in #password {
+    width: 95%;
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.sign-in input[type=submit] {
+    color: white;
+    padding: 0.7em 1.7em;
+    border-radius: 0.5em;
+    font-size: 12px;
+    background: #237bbe;
+    border: 1px solid #e8e8e8;
+}
+.sign-in input[type=submit]:hover{
+    background: white;
+    color:#237bbe;
+    border: 1px solid #237bbe;
+}
+
+/* Sign up */
+.sign-up {
+    border: 1px solid #e8e8e8;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+}
+#user_username, #user_email, #user_password, #user_password_confirmation {
+    width: 95%;
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.sign-up input[type=submit]{
+    color: white;
+    padding: 0.7em 1.7em;
+    border-radius: 0.5em;
+    font-size: 12px;
+    background: #237bbe;
+    border: 1px solid #e8e8e8;
+}
+.sign-up input[type=submit]:hover{
+    background: white;
+    color:#237bbe;
+    border: 1px solid #237bbe;
+}
+
+/* User-details */
+.user-details {
+    width: 80%;
+    margin: auto;
+}
+.user-details h3{
+    margin-bottom: 20px;
+}
+.user-details .button-actions{
+    color: white;
+    padding: 0.7em 1.7em;
+    border-radius: 0.5em;
+    font-size: 12px;
+    background: #237bbe;
+    border: 1px solid #e8e8e8;
+    text-decoration: none;
+}
+.user-details .button-delete{
+    color: white;
+    padding: 0.7em 1.7em;
+    border-radius: 0.5em;
+    font-size: 12px;
+    background: #f01e1e;
+    border: 1px solid #e8e8e8;
+    text-decoration: none;
+}
+
+/* All Users */
+.users {
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}

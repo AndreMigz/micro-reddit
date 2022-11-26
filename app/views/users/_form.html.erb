@@ -1,20 +1,22 @@
 <%= form_with(model: user, local: true) do |f| %>
+    <div class="sign-up">
+        <h1>Sign up</h1>
+        <%= f.label :username %><br>
+        <%= f.text_field :username, autofocus: true%><br>
 
-    <%= f.label :username %><br>
-    <%= f.text_field :username, autofocus: true%><br>
+        <%=f.label :email %><br>
+        <%=f.email_field :email %><br>
 
-    <%=f.label :email %><br>
-    <%=f.email_field :email %><br>
+        <%= f.label :password %><br>
+        <%= f.password_field :password %><br>
 
-    <%= f.label :password %><br>
-    <%= f.password_field :password %><br>
+        <%= f.label :password_confirmation, "Confirm Password" %><br>
+        <%= f.password_field :password_confirmation %><br>
 
-    <%= f.label :password_confirmation, "Confirm Password" %><br>
-    <%= f.password_field :password_confirmation %><br>
-
-    <% if user.new_record? %>
-        <%= f.submit "Create Account"%>
-    <% else %>
-        <%= f.submit "Update Account" %>
-    <% end %>
+        <% if user.new_record? %>
+            <%= f.submit "Create Account"%>
+        <% else %>
+            <%= f.submit "Update Account" %>
+        <% end %>
+    </div>
 <% end %>

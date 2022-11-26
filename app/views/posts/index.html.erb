@@ -1,8 +1,15 @@
-<h1>Posts</h1>
-<%= link_to "Post", new_post_path, class: "button" %>
-<ul>
-    <% @post.each do |post| %>
-        Posted by <%=post.user.username %> <%= time_ago_in_words(post.created_at) %> ago
-        <h4><%= link_to post.title, post %></h4>
-    <% end %>
-</ul>
+<div class="posts">
+    <ul>
+        <% @post.each do |post| %>
+            <div class="content">
+                <p class="posted_by">
+                    Posted by <%=post.user.username%> <%= time_ago_in_words(post.created_at) %> ago<br>
+                </p>
+                <%= link_to post.title, post, class: "post-title"%><br>
+                <p>
+                    <%= truncate(post.body, length: 50, separator: ' ') %>
+                </p>
+            </div>
+         <% end %>
+    </ul>
+</div>

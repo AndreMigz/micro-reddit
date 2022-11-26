@@ -12,8 +12,12 @@
                 </li>
                 <%#= link_to "Sign out", posts_path, class: "button"%>
                 <li>
-                    <%= link_to "Sign Out", session_path,
+                    <%#= link_to "Sign Out", session_path,
                                  method: :delete, class: "buttton"%>
+
+                    <%= link_to "Sign Out", session_path, 
+                    data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                    class: "button" %>
                 </li>
             <% else %>
                 <li>

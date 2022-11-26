@@ -1,9 +1,22 @@
 <section class="post-details">
-    Posted by <%= @post.user.username %>
-    <h2><%= @post.title %></h2>
-    <p>
-        <%= @post.body %>
-    </p>
+    <div class="post-main">
+        <div class="action-opt">
+            Posted by <%= @post.user.username %>
+            <div>
+            <% if @post.user.username == current_user.username %>
+                <%= link_to image_tag("edit.png"), edit_post_path(@post) %></li>
+                        <%= link_to image_tag("delete.png"), post_path(@post), data: {
+                                            turbo_method: :delete,
+                                            turbo_confirm: "Are you sure?"
+                                            } %>
+            <% end %>
+            </div>
+        </div>
+            <h2><%= @post.title %></h2>
+            <p>
+                <%= @post.body %>
+            </p>
+    </div>
     <h3>Comments</h3>
     <%= render @post.comments %>
     <h3>Add a comment:</h3>

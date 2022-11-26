@@ -22,6 +22,12 @@
    background-color:rgb(244, 242, 242);
  }
 
+ img {
+    height: 15px;
+    width: 15px;
+    margin-right: 15px;
+ }
+
  /* Header */
  
  header {
@@ -81,7 +87,7 @@
 .content{
     margin-bottom: 15px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 20px;
     background: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -97,7 +103,7 @@
 /* Create Post */
 .create-new {
     width: 80%;
-    height: 380px;
+    height: 400px;
     margin: auto;
     background-color: #f9f9f9;
     border: 1px solid rgb(232, 232, 232);
@@ -151,24 +157,35 @@
     box-sizing: border-box;
     border-radius: 15px;
 }
-.post-details h2 {
+.post-details .post-main{
+    border: 1px solid #c7c7c7;
+    padding:  10px 10px;
+    border-radius: 10px;
+}
+.post-details .action-opt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .post-details h3 {
     margin-top: 30px;
 }
 .post-details .comment-content{
     border: 1px solid #c7c7c7;
-    padding: 0px 10px;
+    padding: 10px 10px;
     border-radius: 10px;
     margin-bottom: 10px;
     
 }
 .post-details .commenter {
     font-size: 10px;
+    display: flex;
+    justify-content: space-between;
 
 }
 .post-details .body {
     font-size: 14px;
+    margin-top: 5px;
 }
 
 .add-comment #comment_body {
@@ -311,7 +328,7 @@
 }
   
 .notice {
-    color:#72ec7c;
+    color:#309a38;
     font-size: 16px;
 }
 

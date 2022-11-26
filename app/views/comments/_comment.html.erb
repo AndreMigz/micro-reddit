@@ -1,8 +1,16 @@
 <div class="comment-content">
-    <p class="commenter">
-        <strong><%= comment.user.username %></strong>
-        <%= time_ago_in_words(comment.created_at) %> ago
-    </p>
+    <div class="commenter">
+        <%= comment.user.username %> <%= time_ago_in_words(comment.created_at) %> ago
+        <div class="comment-action">
+            <% if comment.user.username == current_user.username || 
+            @post.user.username == current_user.username%>
+            <%= link_to image_tag("delete.png"), [comment.post, comment], data: {
+                                            turbo_method: :delete,
+                                            turbo_confirm: "Are you sure?"
+                                            } %>
+            <% end%>
+        </div>
+    </div>
     <p class="body">
         <%= comment.body %>
     </p>

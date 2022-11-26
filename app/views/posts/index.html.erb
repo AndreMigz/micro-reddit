@@ -5,10 +5,11 @@
                 <p class="posted_by">
                     Posted by <%=post.user.username%> <%= time_ago_in_words(post.created_at) %> ago<br>
                 </p>
-                <%= link_to post.title, post, class: "post-title"%><br>
+                    <%= link_to post.title, post, class: "post-title"%><br>
                 <p>
                     <%= truncate(post.body, length: 50, separator: ' ') %>
                 </p>
+                <%= post.comments.count%> comments
             </div>
          <% end %>
     </ul>
